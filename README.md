@@ -1,10 +1,10 @@
-# A Booking website using React hooks
+# Ink demo website
 
-This is a booking website for a company's internal booking management. It is a practice project for the book _React Hooks in Action_ by JOHN LARSEN.
+A demo site for a company called Ink,Inc. The website consists of a main landing page, a main content page showcasing product features and web contact form, signup/login forms.
 
 ## Table of contents
 
-- [A Booking website using React hooks](#a-booking-website-using-react-hooks)
+- [Ink demo website](#ink-demo-website)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [Requirements](#requirements)
@@ -22,18 +22,26 @@ This is a booking website for a company's internal booking management. It is a p
 
 ### Requirements
 
-The entire application is divided into four categrouies of components: Bookables, Bookings, Users and UI
+In this assignment, you will practice working with basic HTML tags, and attributes.
+
+- Use HTML5 syntax to build at least 3 webpages to demonstrate your understanding of Semantic HTML syntax and structure.
+- You have to have at least one page that features main content e.g., cooking recipes, movies summary and rating, car listings, etc.
+- Your content has to be rich using text, images, etc.
+- You have to have at least one page with brief content e.g., FAQ, About, Meet the Team, Customer testimonials, etc.
+- You have to have at least one page with web form e.g., contact us, register, schedule time, etc.
 
 ### Screenshot
 
-![screenshot1](./screenshots/Booking_management_snapshot.png)
-![screenshot2](./screenshots/Booking_management_snapshot2.png)
-![screenshot3](./screenshots/Booking_management_snapshot3.png)
-![screenshot4](./screenshots/Booking_management_snapshot4.png)
+![snapshots1](./snapshots/ink-demo-snapshot1.png)
+![snapshots2](./snapshots/ink-demo-snapshot2.png)
+![snapshots3](./snapshots/ink-demo-snapshot3.png)
+![snapshots4](./snapshots/ink-demo-snapshot4.png)
+![snapshots5](./snapshots/ink-demo-snapshot5.png)
+![snapshots6](./snapshots/ink-demo-snapshot6.png)
 
 ### Links
 
-- Live Site: [Booking-site](https://haolzz.github.io/Booking/)
+- Live Site: [Ink-demo](http://haolzz.github.io/ink-demo/)
 
 ## My process
 
@@ -41,51 +49,16 @@ The entire application is divided into four categrouies of components: Bookables
 
 - CSS custom properties
 - CSS Flexbox and Grid for layout
-- React hooks for React component state management
--
 
 ### What I learned
 
-1. Functionality that could be shared means we can extarct it into a custom hook. In this example code below, the data fetching function is encapsulated within a custom hook called `useFetch`.
-
-   ```js
-   import { useState, useEffect } from 'react';
-   import { getData } from './api';
-   export default function useFetch(url) {
-     const [data, setData] = useState();
-     const [error, setError] = useState(null);
-     const [status, setStatus] = useState('idle');
-     useEffect(() => {
-       let doUpdate = true;
-
-       setStatus('loading');
-       setData(undefined);
-       setError(null);
-
-       getData(url)
-         .then((data) => {
-           if (doUpdate) {
-             setData(data);
-             setStatus('success');
-           }
-         })
-         .catch((error) => {
-           if (doUpdate) {
-             setStatus('error');
-             setError(error);
-           }
-         });
-
-       return () => (doUpdate = false);
-     }, [url]);
-     return { data, status, error };
-   }
-   ```
+1. Web form elements and related accessibility attributes.
 
 ### Continued development
 
-- Rewrite with TypeScript
-- Beautify website using Material-UI
+- Add media query for responsive layout
+- Reorganize the single style.css into modular files
+- Adopt a CSS framework(i.e Bootstrap) for styling
 
 ### Useful resources
 
