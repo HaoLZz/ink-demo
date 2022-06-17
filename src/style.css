@@ -290,6 +290,7 @@ p {
 .login-hero img {
   max-width: 100%;
   object-fit: cover;
+  max-height: 450px;
 }
 
 .login-form {
@@ -334,6 +335,16 @@ p {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   border: 1px solid var(--dark-green);
   background-image: none;
+}
+
+/* Sign up form styling */
+
+.signup-form {
+  justify-content: space-evenly;
+}
+
+.signup-form label[for='checkbox'] a {
+  display: inline;
 }
 
 /* Pricing page styling */

@@ -33,39 +33,33 @@
       <div class="flex-center">
         <div class="tile-row login">
           <div class="tile login-hero">
-            <h3>We are here for you 24/7</h3>
-            <img src="./assets/images/contact-us.jpg" alt="contact us" />
+            <h3>Sign Up Today!</h3>
+            <img src="./assets/images/sign-up.jpg" alt="Sign up" />
           </div>
           <div class="tile">
-            <form class="login-form" method="post">
+            <form class="login-form signup-form" method="post">
               <div class="form__group">
-                <label for="name">Name</label>
+                <label for="name">Your name</label>
                 <input id="name" type="text" name="name" required />
+              </div>
+              <div class="form__group">
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" required />
               </div>
               <div class="form__group">
                 <label for="email">Email</label>
                 <input id="email" type="email" name="email" required />
               </div>
-              <div class="form__group">
-                <label for="date">Date</label>
-                <input
-                  type="date"
-                  name="date"
-                  id="date"
-                  placeholder="MM/DD/YYYY"
-                  required
-                />
+              <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" required />
               </div>
-              <div class="form__group">
-                <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Please let us know your thought"
-                  required
-                ></textarea>
+              <div>
+                <input type="checkbox" name="terms-conditions" id="checkbox" />
+                <label for="checkbox">Agree to our <a href="#">Terms and Conditions</a></label>
               </div>
-              <button type="submit">Submit</button>
+              <button type="submit">Sign Up</button>
+              </div>
             </form>
           </div>
         </div>
