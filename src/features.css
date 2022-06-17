@@ -1,0 +1,95 @@
+/* main section flexbox */
+.flex {
+  display: flex;
+}
+
+.tile {
+  padding: 1.5em;
+  background-color: #fff;
+}
+
+.flex > * + * {
+  margin-top: 0;
+  margin-left: 1.5em;
+}
+
+/* If using flex grow, flexbox item basis size is calculated from the width of flex parent container  minus any paddings and margins on the flex items*/
+.column-main {
+  flex: 66.67%;
+}
+
+.column-sidebar {
+  flex: 33.33%;
+}
+
+/* sidebar flexbox layout */
+.column-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-sidebar > .tile {
+  flex: 1;
+}
+
+/* Sign-up form styling */
+.login-form h3 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.login-form input:not([type='checkbox']):not([type='radio']) {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+}
+
+.login-form button {
+  margin-top: 1em;
+  border: 1px solid #cc6b5a;
+  background-color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* price styling */
+.centered {
+  text-align: center;
+}
+
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.7;
+}
+
+.cost > span {
+  margin-top: 0;
+}
+
+.cost-currency {
+  font-size: 2rem;
+}
+
+.cost-dollars {
+  font-size: 4rem;
+}
+
+.cost-cents {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+
+/* CTA Button styling */
+
+.cta-button {
+  display: block;
+  background-color: #cc6b5a;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}

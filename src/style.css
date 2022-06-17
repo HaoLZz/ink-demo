@@ -1,0 +1,385 @@
+:root {
+  --brand-green: hsl(162, 87%, 21%);
+  --dark-green: hsl(162, 88%, 30%);
+  --medium-green: hsl(162, 73%, 46%);
+  --text-color: hsl(210, 11%, 15%);
+  --gray: hsl(210, 7%, 56%);
+  --light-gray: hsl(210, 17%, 95%);
+  --extra-light-gray: hsl(210, 17%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(342, 63%, 46%);
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  background-color: var(--extra-light-gray);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Sansita, serif;
+  letter-spacing: 0.03em;
+}
+
+a {
+  color: var(--medium-green);
+}
+
+a:hover {
+  color: var(--brand-green);
+}
+
+a:active {
+  color: var(--red);
+}
+
+/* Header styling */
+
+.nav-container {
+  background-color: var(--medium-green);
+}
+
+.nav-container__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.625em 0;
+}
+
+.home-link {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-family: Sansita, serif;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.fonts-failed .home-link {
+  font-family: Georgia, serif;
+}
+
+.top-nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.top-nav a {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.3rem 1.25rem;
+  color: var(--white);
+  background-color: var(--brand-green);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+}
+
+.top-nav > li + li {
+  margin-left: 0.625em;
+}
+
+.top-nav a:hover {
+  background-color: var(--dark-green);
+}
+
+.top-nav__featured > a {
+  color: var(--brand-green);
+  background-color: var(--white);
+}
+
+.top-nav__featured > a:hover {
+  color: var(--medium-green);
+  background-color: var(--white);
+}
+
+/* Hero Image styling */
+
+.hero {
+  background: url(./assets/images/collaboration.jpg) no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5em;
+}
+
+.hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5.5625em 12.5em 12.5em 0;
+  text-align: right;
+}
+
+.hero h2 {
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  font-size: 1.95rem;
+  letter-spacing: -0.02em;
+}
+
+/* Standard button module */
+.button {
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: var(--brand-green);
+  border: 2px solid var(--brand-green);
+  border-radius: 0.2em;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.button:hover {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.button--cta {
+  padding: 0.6em 1em;
+  background-color: var(--brand-green);
+  color: var(--white);
+  border: none;
+  text-decoration: none;
+}
+
+/* Main Content styling */
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.tile-row {
+  display: flex;
+}
+
+.tile-row > * {
+  flex: 1;
+}
+
+.tile-row > * + * {
+  margin-left: 1.5625em;
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.tile {
+  background-color: var(--white);
+  border-radius: 0.3em;
+  padding: 1.5625em;
+}
+
+.tile > h4 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.tag-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tag-list > li {
+  display: inline;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  background-color: var(--light-gray);
+  line-height: 2.6;
+}
+
+/* Footer styling */
+
+.page-footer {
+  margin-top: 3em;
+  padding: 1em 0;
+  background-color: var(--light-gray);
+  color: var(--gray);
+}
+
+.page-footer__inner {
+  margin: 0 auto;
+  max-width: 1080px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* Features page styling */
+
+.container-features {
+  max-width: 1800px;
+}
+
+/* Fallback gallery layout using floats */
+.portfolio {
+  margin: 35px 0;
+}
+
+.portfolio > figure {
+  display: inline-block;
+  max-width: 300px;
+  margin: 0;
+}
+.portfolio img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.portfolio figcaption {
+  padding: 0.3em 0.8em;
+  background-color: var(--dark-green);
+  color: #fff;
+  text-align: right;
+}
+
+/* Grid gallery layout */
+@supports (display: grid) {
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+  }
+  .portfolio > figure {
+    max-width: initial;
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio img {
+    flex: 1;
+  }
+
+  .portfolio .featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+/* Web form styling */
+
+.login h3 {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-hero > * + * {
+  margin: 15px 0;
+}
+
+.login-hero img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.login-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login-form a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login-form input:not([type='checkbox']):not([type='radio']) {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+}
+
+.login-form button {
+  border: 1px solid var(--medium-green);
+  background-color: var(--brand-green);
+  color: var(--white);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: var(--dark-green);
+}
+
+.form__group textarea {
+  margin: 0;
+  overflow: auto;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background-clip: padding-box;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid var(--dark-green);
+  background-image: none;
+}
+
+/* Pricing page styling */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.centered {
+  text-align: center;
+}
+
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.7;
+}
+
+.tile-pricing {
+  padding: 3.5rem;
+}
+
+.tile-pricing > * + * {
+  margin: 15px 0;
+}
+
+.tile-pricing .button--cta {
+  display: block;
+}
+
+.cost > span {
+  margin-top: 0;
+}
+
+.cost-currency {
+  font-size: 2rem;
+}
+
+.cost-dollars {
+  font-size: 4rem;
+}
+
+.cost-cents {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
