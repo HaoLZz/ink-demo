@@ -69,6 +69,4 @@ In this assignment, you will practice working with basic HTML tags, and attribut
 
 ## Acknowledgments
 
-```
-
-```
+-Photos from [Unsplash](https://unsplash.com/)
